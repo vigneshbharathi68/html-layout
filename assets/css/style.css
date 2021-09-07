@@ -1,25 +1,89 @@
 @import url(https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500&amp;display=swap);
+
+/*Global Style
+------------------------------------*/
 body {
-    font-family: 'Varta';
-    background-image: url("../img/bg-cover.png");
+  font-family: "Varta";
+  color: darkgray;
 }
 
-
-h1{
-    border-left: 10px solid black;
+h1 {
+  font-size: 2em;
 }
+p {
+  margin: 0;
+  font-size: 1em;
+}
+
+p.description {
+  text-align: center;
+  font-size: 0.65em;
+  font-weight: bold;
+  color: black;
+}
+span.description {
+  display: block;
+  text-align: center;
+  font-size: 0.65em;
+  color: gray;
+}
+
+img {
+  width: 11rem;
+  margin: 0 auto;
+}
+/*Heading section
+------------------------------------*/ 
+
 .container {
-    max-width: 1152px;
-    height: 720px;
-    margin: auto;
-    position: relative;
-    border: 3px solid red;
+  max-width: 1152px;
+  height: 720px;
+  margin: 0 auto;
+  position: relative;
+  /* border: 3px solid red; */
+  background-image: url("../img/bg-cover.png");
 }
-.center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%)
+
+.container > h1 {
+  border-left: 8px solid black;
+}
+.container > p {
+  padding: 0.5rem; 
+  font-style: italic;
+}
+
+/*Image section
+------------------------------------*/
+.content-wrap {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1rem repeat(3, 1fr) 1rem;
+  grid-gap: 1em;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 3px solid red;
+  margin: 65px auto;
+}
+
+.arrow {
+  width: 3rem;
+}
+
+.content-wrap > div:nth-child(5) > img:nth-child(1) {
+  rotate: 180deg;
+}
+
+.active {
+  padding: 8px 15px;
+  transition: transform 0.3s;
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+  border: 2px solid gray;
+  background-image: url("../img/wheel-bg.jpg");
+  width: 175px;
 }
